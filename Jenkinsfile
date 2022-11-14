@@ -3,7 +3,7 @@ node('slave-node') {
     stage ('Build image') {
     docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
     
-        def customImage = docker.build("Emmylong1"/pipeline"latest")
+        def customImage = docker.build("Emmylong1"/pipelin:latest")
         customImage.push()
     }
 }
