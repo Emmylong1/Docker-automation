@@ -1,7 +1,7 @@
 node('slave-node') {
     checkout scm 
     stage ('Build image') {
-    docker.withRegistry('https://registry.hub.docker.com, 'docker-hub') {
+    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
     
         def customImage = docker.build("Emmylong1"/pipeline"latest")
         customImage.push()
